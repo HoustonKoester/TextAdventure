@@ -15,19 +15,19 @@ public class RoomManager {
 				1,
 				2,
 				"",
-				"Seems light I might be able to light a fire if I had a lighter, \notherwise I guess I have to go left or right\n");
+				"Seems like I might be able to light a fire if I had a lighter, \notherwise I guess I have to go left or right.\n");
 		dungeon[0] = startRoom;
 		
 		Room fireRoom = new Room(
 				"Left - ",
 				"Looking down the walk way it looks dark, but you can smell smoke in the air\n",
 				"It's very dim in this room, but with the little light that reaches this room you can make out the details.\n"
-				+ "In the center of the room appears to be the remains of a campfire\n"
+				+ "In the center of the room appears to be the remains of a campfire,\n"
 				+ "next to the campfire is a small lighter.\n",
 				2,
 				3,
 				"lighter",
-				"I could grab the lighter");
+				"I could grab the lighter.\n");
 		dungeon[1] = fireRoom;
 		
 		Room echoRoom = new Room(
@@ -49,7 +49,7 @@ public class RoomManager {
 				4,
 				5,
 				"",
-				"I guess there's nothing here, I should go left or go right");
+				"I guess there's nothing here, I should go left or go right.\n");
 		dungeon[3] = wetRoom;
 		
 		Room skullRoom = new Room(
@@ -62,7 +62,7 @@ public class RoomManager {
 				5,
 				6,
 				"",
-				"Something doesn't feel right... I should go left or go right");
+				"Something doesn't feel right... I should go left or go right.\n");
 		dungeon[4] = skullRoom;
 		
 		Room chestRoom = new Room(
@@ -74,7 +74,7 @@ public class RoomManager {
 				9,
 				9,
 				"oldkey",
-				"If I had a key I could open that chest,\nI guess I have to go left or right...");
+				"If I had a key I could use it on that chest,\nI guess I have to go left or right...\n");
 		dungeon[6] = chestRoom;
 		
 		Room floodedRoom = new Room(
@@ -86,7 +86,7 @@ public class RoomManager {
 				8,
 				8,
 				"key",
-				"Let's \"look at hole\", otherwise I guess I have to go left or right...");
+				"Let's look at hole, otherwise I guess I have to go left or right...\n");
 		dungeon[7] = floodedRoom;
 		
 		Room marbleRoom = new Room(
@@ -99,7 +99,7 @@ public class RoomManager {
 				7,
 				7,
 				"",
-				"Doesn't look like anything is here I guess I have to go left or right...");
+				"Doesn't look like anything is here I guess I have to go left or right...\n");
 		dungeon[8] = marbleRoom;
 		
 		Room rockfallRoom = new Room(
@@ -107,7 +107,7 @@ public class RoomManager {
 				"There's a pile of rocks blocking this pathway\n",
 				"You attempt to move rocks out of the pathway.\n "
 				+ "One by one\n"
-				+ "Another rock hits the ground, you swear you can see progress being made\n"
+				+ "Another rock hits the ground, you swear you can see progress being made.\n"
 				+ "...\n"
 				+ "..\n"
 				+ ".\n",
@@ -126,7 +126,7 @@ public class RoomManager {
 				5,
 				5,
 				"",
-				"I could \"look at fingernails\", but I feel like I should to go left or right...");
+				"I could look at fingernails, but I feel like I should to go left or right...\n");
 		dungeon[10] = fingernailRoom;
 		
 		

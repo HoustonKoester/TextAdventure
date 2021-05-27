@@ -184,7 +184,6 @@ public class Main {
 		
 			}
 		}
-		//s.close();
 
 	}	
 	
@@ -215,7 +214,7 @@ public class Main {
 			Thread.sleep(1500);
 			System.out.println(dungeon[mc.getIndex()].shortDescription );
 			Thread.sleep(1500);
-			System.out.println(mc.getCurrentRoom().longDescription);
+			System.out.println(mc.getCurrentRoom().longDescription+"\n");
 		}
 	}
 	
@@ -247,7 +246,7 @@ public class Main {
 			Thread.sleep(1500);
 			System.out.println(dungeon[mc.getIndex()].shortDescription );
 			Thread.sleep(1500);
-			System.out.println(mc.getCurrentRoom().longDescription);
+			System.out.println(mc.getCurrentRoom().longDescription +"\n");
 		}
 	}
 	
