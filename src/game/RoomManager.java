@@ -126,7 +126,7 @@ public class RoomManager {
 				5,
 				5,
 				"",
-				"I could look at fingernails, but I feel like I should to go left or right...\n");
+				"I could inspect fingernails, but I feel like I should to go left or right...\n");
 		dungeon[10] = fingernailRoom;
 		
 		

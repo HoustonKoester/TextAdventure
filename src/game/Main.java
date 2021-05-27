@@ -1,3 +1,8 @@
+//Text adventure made by Houston Koester, a prologue to a story called Welcome to the Pit also made by Houston Koester
+
+//There are plenty of things I could add to make the code better, and there's some minor syntax stuff that would need to
+//Be fixed if this was going to be an actual game, but this is fine for now.
+
 package game;
 import java.util.Scanner;
 
@@ -5,17 +10,20 @@ import fixtures.Room;
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
+		//initialize main character and dungeon rooms
 		Player mc = new Player();
 		Room[] dungeon = RoomManager.init();
 		mc.setCurrentRoom(dungeon[0]);
 		
+		//opening lines
 		if(mc.getIndex() == 0) {
 		System.out.println("You awaken with your head in a daze feeling cold tile against your face\nYou stand up slowly.\n");
 		Thread.sleep(1500);
 		System.out.println(mc.getCurrentRoom().longDescription);
 		}
 		while(true) {
-			
+			//gameplay loop
+			//Below is actually end game content that starts at the beginning of the loop
 			if(mc.getIndex() == 0 && mc.isLighter()) {
 				System.out.println("Do you want to start the fire in the middle of the room?");
 				Scanner s = new Scanner(System.in);
@@ -66,7 +74,7 @@ public class Main {
 				}
 			}
 			
-			
+			//minor adjustments for certain rooms that have only one exit, or do they
 			if(mc.getIndex() == 2) {
 				System.out.println(dungeon[mc.getIndex()+mc.getCurrentRoom().rightDist].name + dungeon[mc.getIndex()+mc.getCurrentRoom().rightDist].shortDescription );
 			}else if(mc.getIndex() != 15){
@@ -100,7 +108,7 @@ public class Main {
 				System.out.println("I dont think I can go that way");
 			}
 			
-		// look at || inspect element options	
+		// look at __ or inspect __ element options	
 		}else if(tok[0].equals("Look") || tok[0].equals("look") || tok[0].equals("inspect")|| tok[0].equals("Inspect")) {
 			if(tok[0].equals("Look") || tok[0].equals("look")){
 				if((tok[2].equals("hole") || tok[2].equals("Hole")) && mc.getIndex() == 7  ) {
@@ -140,7 +148,7 @@ public class Main {
 					System.out.println("Pulling out the item shows that it's a heavy iron key");
 					Thread.sleep(800);
 					}
-				}else if((tok[1].equals("fingernail") || tok[1].equals("Fingernail")) && mc.getIndex() == 10  ){
+				}else if((tok[1].equals("fingernail") || tok[1].equals("Fingernail")|| tok[1].equals("fingernails") || tok[1].equals("Fingernails")) && mc.getIndex() == 10  ){
 					//fingernail inspect
 					System.out.println("All of the fingernails look the exact same!");
 					Thread.sleep(800);
@@ -212,9 +220,9 @@ public class Main {
 			Thread.sleep(450);
 			System.out.println(dungeon[mc.getIndex()].name);
 			Thread.sleep(1500);
-			System.out.println(dungeon[mc.getIndex()].shortDescription );
+			System.out.println(dungeon[mc.getIndex()].shortDescription +"\n");
 			Thread.sleep(1500);
-			System.out.println(mc.getCurrentRoom().longDescription+"\n");
+			System.out.println(mc.getCurrentRoom().longDescription);
 		}
 	}
 	
@@ -244,9 +252,9 @@ public class Main {
 			Thread.sleep(450);
 			System.out.println(dungeon[mc.getIndex()].name);
 			Thread.sleep(1500);
-			System.out.println(dungeon[mc.getIndex()].shortDescription );
+			System.out.println(dungeon[mc.getIndex()].shortDescription +"\n");
 			Thread.sleep(1500);
-			System.out.println(mc.getCurrentRoom().longDescription +"\n");
+			System.out.println(mc.getCurrentRoom().longDescription);
 		}
 	}
 	
