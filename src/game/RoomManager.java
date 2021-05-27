@@ -35,7 +35,7 @@ public class RoomManager {
 				"You can hear your voice echo back to you whenever you try to speak.\n",
 				"You enter a small room and your steps echo back to you with every step. \n"
 				+ "The longer you spend in this room the more you swear you can start hearing footsteps that aren't your own.\n",
-				3,
+				0,
 				4,
 				""
 				,"I feel like I shouldn't stay here... too late");
@@ -86,7 +86,7 @@ public class RoomManager {
 				8,
 				8,
 				"key",
-				"Let's look at the hole, otherwise I guess I have to go left or right...");
+				"Let's \"look at hole\", otherwise I guess I have to go left or right...");
 		dungeon[7] = floodedRoom;
 		
 		Room marbleRoom = new Room(
@@ -126,14 +126,14 @@ public class RoomManager {
 				5,
 				5,
 				"",
-				"I could look at the fingernails, but I feel like I should to go left or right...");
+				"I could \"look at fingernails\", but I feel like I should to go left or right...");
 		dungeon[10] = fingernailRoom;
 		
 		
 		
 		
 		Room darkRoom = new Room( 
-			"Nothingness - ",
+			"Left/Right - ",
 			"There's nothing but darkness down this way.\n","You step into the darkness and wait.",-15,-15,"","Too late for help");
 		dungeon[15] = darkRoom;
 		return dungeon;
